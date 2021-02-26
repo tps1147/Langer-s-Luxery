@@ -38,9 +38,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background:linear-gradient(transparent , white), url(../ameen-fahmy-JuesIryw53E-unsplash.jpg) no-repeat center / cover;
+    background:black url(../ameen-fahmy-JuesIryw53E-unsplash.jpg) no-repeat center / cover;
     
-    height: 85vh;
+    height: 70vh;
     
   }
   h1 {
@@ -49,23 +49,13 @@ body {
     word-spacing: 4em;
     font-family: 'Shippori Mincho', serif;
   }
-  h3 {
-    font-family: 'Shippori Mincho', serif;
-  }
   main {
     margin: 4rem auto 6rem;
     max-width: 650px;
     width: 90vw;
   }
-  .about {
-    display: flex;
-    flex-direction: column;
 
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* .products {
+  .products {
        display: grid;
        gap: 2rem;
        grid-template-columns: repeat(2, 1fr);
@@ -100,4 +90,4 @@ body {
        font-weight: 800;
        line-height: 1.25rem;
        padding: 0.25rem;
-     } */
+     }
