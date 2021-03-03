@@ -22,14 +22,6 @@
       "image": "sincerely-media-qeDcKFADdp8-unsplash.jpg?auto=format&fit=crop&w=600&h=600&q=80",
       "amount": 1500,
       "currency": "USD"
-    },
-    {
-      "sku": "DEMO002",
-      "name": "Adventure Mug",
-      "description": "We’re going on an adventure! Photo by Annie Spratt on Unsplash.",
-      "image": "sincerely-media-qeDcKFADdp8-unsplash.jpg?auto=format&fit=crop&w=600&h=600&q=80",
-      "amount": 1500,
-      "currency": "USD"
     }
   ]
   
