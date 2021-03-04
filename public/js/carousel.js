@@ -1,111 +1,39 @@
-!(function(d){
-    var itemClassName = "carousel__slide";
-    items = d.getElementsByClassName(itemClassName),
-    totalItems = items.length,
-    slide = 0,
-    moving = true;
+// Select the carousel you'll need to manipulate and the buttons you'll add events to
+const carousel = document.querySelector("[data-target='carousel']");
+const card = carousel.querySelector("[data-target='card']");
+const leftButton = document.querySelector("[data-action='slideLeft']");
+const rightButton = document.querySelector("[data-action='slideRight']");
 
-    // Set classes
-function setInitialClasses() {
-  // Targets the previous, current, and next items
-  // This assumes there are at least three items.
-  items[totalItems - 1].classList.add("prev");
-  items[0].classList.add("active");
-  items[1].classList.add("next");
-}
-// Set event listeners
-function setEventListeners() {
-  var next = d.getElementsByClassName('carousel__button--next')[0],
-      prev = d.getElementsByClassName('carousel__button--prev')[0];
-  next.addEventListener('click', moveNext);
-  prev.addEventListener('click', movePrev);
-}
-// Next navigation handler
-function moveNext() {
-  // Check if moving
-  if (!moving) {
-    // If it's the last slide, reset to 0, else +1
-    if (slide === (totalItems - 1)) {
-      slide = 0;
-    } else {
-      slide++;
+// Prepare to limit the direction in which the carousel can slide, 
+// and to control how much the carousel advances by each time.
+// In order to slide the carousel so that only three cards are perfectly visible each time,
+// you need to know the carousel width, and the margin placed on a given card in the carousel
+const carouselWidth = carousel.offsetWidth;
+const cardStyle = card.currentStyle || window.getComputedStyle(card)
+const cardMarginRight = Number(cardStyle.marginRight.match(/\d+/g)[0]);
+
+// Count the number of total cards you have
+const cardCount = carousel.querySelectorAll("[data-target='card']").length;
+
+// Define an offset property to dynamically update by clicking the button controls
+// as well as a maxX property so the carousel knows when to stop at the upper limit
+let offset = 0;
+const maxX = -((cardCount / 3) * carouselWidth + 
+               (cardMarginRight * (cardCount / 3)) - 
+               carouselWidth - cardMarginRight);
+
+
+// Add the click events
+leftButton.addEventListener("click", function() {
+  if (offset !== 0) {
+    offset += carouselWidth + cardMarginRight;
+    carousel.style.transform = `translateX(${offset}px)`;
     }
-    // Move carousel to updated slide
-    moveCarouselTo(slide);
-  }
-}
-// Previous navigation handler
-function movePrev() {
-  // Check if moving
-  if (!moving) {
-    // If it's the first slide, set as the last slide, else -1
-    if (slide === 0) {
-      slide = (totalItems - 1);
-    } else {
-      slide--;
-    }
-          
-    // Move carousel to updated slide
-    moveCarouselTo(slide);
-  }
-}
-function disableInteraction() {
-  // Set 'moving' to true for the same duration as our transition.
-  // (0.5s = 500ms)
+})
   
-  moving = true;
-  // setTimeout runs its function once after the given time
-  setTimeout(function(){
-    moving = false
-  }, 500);
-}
-
-function moveCarouselTo(slide) {
-  // Check if carousel is moving, if not, allow interaction
-  if(!moving) {
-    // temporarily disable interactivity
-    disableInteraction();
-    // Update the "old" adjacent slides with "new" ones
-    var newPrevious = slide - 1,
-        newNext = slide + 1,
-        oldPrevious = slide - 2,
-        oldNext = slide + 2;
-    // Test if carousel has more than three items
-    if ((totalItems - 1) > 3) {
-      // Checks and updates if the new slides are out of bounds
-      if (newPrevious <= 0) {
-        oldPrevious = (totalItems - 1);
-      } else if (newNext >= (totalItems - 1)){
-        oldNext = 0;
-      }
-      // Checks and updates if slide is at the beginning/end
-      if (slide === 0) {
-        newPrevious = (totalItems - 1);
-        oldPrevious = (totalItems - 2);
-        oldNext = (slide + 1);
-      } else if (slide === (totalItems -1)) {
-        newPrevious = (slide - 1);
-        newNext = 0;
-        oldNext = 1;
-      }
-      // Now we've worked out where we are and where we're going, 
-      // by adding/removing classes we'll trigger the transitions.
-      // Reset old next/prev elements to default classes
-      items[oldPrevious].className = itemClassName;
-      items[oldNext].className = itemClassName;
-      // Add new classes
-      items[newPrevious].className = itemClassName + " prev";
-      items[slide].className = itemClassName + " active";
-      items[newNext].className = itemClassName + " next";
-    }
+rightButton.addEventListener("click", function() {
+  if (offset !== maxX) {
+    offset -= carouselWidth + cardMarginRight;
+    carousel.style.transform = `translateX(${offset}px)`;
   }
-}
-function initCarousel() {
-  setInitialClasses();
-  setEventListeners();
-  // Set moving to false so that the carousel becomes interactive
-  moving = false;
-}
-
-initCarousel();
-  }(document));
+})

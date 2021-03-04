@@ -45,7 +45,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background:linear-gradient(transparent, transparent, white), url(../clothes.png) no-repeat center / cover;
+    background:linear-gradient(white, transparent, white), url(../clothes.png) no-repeat center / cover;
     
     height: 85vh;
     
@@ -56,10 +56,24 @@ body {
     font-family: 'Shippori Mincho', serif;
     height: 15rem;
     border-radius: .3em;
+    border: .7rem solid rgb(53, 53, 53); 
+    padding-left: 10rem;
     
+    width: 50rem;
+  }
+  .mainconover {
+    background-color: white;
+    border:solid; 
+    color: black;
+    font-family: 'Shippori Mincho', serif;
+    height: 20rem;
+    border: .7rem solid rgb(53, 53, 53);
+    border-radius: .3em;
+    margin-right: -10rem;
+    margin-bottom: 12rem;
     padding: 20px;
-    
-    width: 55rem;
+    z-index: 4;
+    width: 35rem;
   }
   h1 {
     color: black;
@@ -75,28 +89,33 @@ body {
   
   .about {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-top: 20rem;
     width: 100%;
     color: white;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
     height: 80vh;
-    background: linear-gradient(white, transparent, white), url(../steve-halama-T9A31lqrXnU-unsplash.jpg) no-repeat center / cover;
+    background: linear-gradient(white 10%, transparent 70%, white 100%), url(../steve-halama-T9A31lqrXnU-unsplash.jpg) no-repeat center / cover;
   }
-
+ .image {
+   height: 6rem;
+   width: 6rem;
+   margin-right: 5rem;
+ }
   .special {
     display: flex;
-    flex-direction: column;
-    margin-top: 20rem;
-    width: 100%;
-    color: white;
-    justify-content: center;
-    align-items: flex-start;
-    height: 80vh;
+    flex-direction: row;
     
+    width: 100%;
+    color: lightgray;
+    justify-content: space-around;
+    align-items: center;
+    height: 60vh;
+    margin-right: 8rem;
   }
-  .wrapper {
+  
+  .wrappershop {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -104,6 +123,20 @@ body {
     margin-left: 8rem;
     width: 35rem;
   }
+  .wrapper2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 8rem;
+    width: 35rem;
+  }
+  #bname {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.2em;
+    margin-left: 2rem;
+  }
+
   .featured {
     display: flex;
     flex-direction: column;
@@ -111,93 +144,17 @@ body {
     color: lightgray;
     justify-content: center;
     align-items: center;
-  }
-
-  .carousel-wrapper {
-    overflow: hidden;
-    width: 100%;
-    
-  }
-  .carousel {
-    transform-style: preserve-3d;
-  }
-  .carousel__slide {
-    opacity: 0;
-    position: absolute;
-    top:0;
-    width: 100%;
-    margin: auto;
-    padding: 1rem 4rem;
-    z-index: 100;
-    transition: transform .5s, opacity .5s, z-index .5s;
-  }
-  .carousel__slide.initial,
-  .carousel__slide.active {
-    opacity: 1;
-    position: relative;
-    z-index: 900;
-  }
-  .carousel__slide.prev,
-  .carousel__slide.next {
-    z-index: 800;
-  }
-  .carousel__slide.prev {
-    transform: translateX(-100%); /* Move 'prev' item to the left */
-  }
-  .carousel__slide.next {
-    transform: translateX(100%); /* Move 'next' item to the right */
-  }
-  .carousel__button--prev,
-  .carousel__button--next {
-    position: absolute;
-    top:50%;
-    width: 3rem;
-    height: 3rem;
-    background-color: #FFF;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    cursor: pointer; 
-    z-index: 1001; /* Sit on top of everything */
-    border: 1px solid black;
-  }
-  .carousel__button--prev {
-    left:0;
-  }
-  .carousel__button--next {
-    right:0;
-  }
-  .carousel__button--prev::after,
-  .carousel__button--next::after {
-    content: " ";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 50%;
-    left: 54%;
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-    transform: translate(-50%, -50%) rotate(135deg);
-  }
-  .carousel__button--next::after {
-    left: 47%;
-    transform: translate(-50%, -50%) rotate(-45deg);
+    margin-top: 10rem;
   }
 
 
-  
 
-.container
-{
-  position: relative;
-  display: flex; 
-  justify-content: space-around;
-}
 .container .card
 {
   position: relative;
   width: 320px;
   height: 450px;
-  background: lightgray;
+  background: rgb(255, 255, 255);
   border-radius: 20px;
   overflow: hidden;
 }
@@ -209,13 +166,13 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: white;
-  clip-path: circle(150px at 80% 20%);
+  background: lightgray;
+  clip-path: circle(75px at 50% 45%);
   transition: 0.5s ease-in-out;
 }
 .container .card:hover:before
 {
-  clip-path: circle(300px at 80% -20%);
+  clip-path: circle(200px at 50% -45%);
 }
 .container .card:after
 {
@@ -271,7 +228,7 @@ body {
   position: relative;
   font-weight: 600;
   letter-spacing: 1px;
-  color: #fff;
+  color:lightgray;
 }
 .container .card .contentBx .size,
 .container .card .contentBx .color
@@ -299,7 +256,7 @@ body {
 .container .card .contentBx .size h3,
 .container .card .contentBx .color h3
 {
-  color: #fff;
+  color: lightgray;
   font-weight: 300;
   font-size: 14px;
   text-transform: uppercase;
@@ -315,7 +272,7 @@ body {
   font-size: 14px;
   display: inline-block;
   color: #111;
-  background: #fff;
+  background: whitesmoke;
   border-radius: 4px;
   margin: 0 5px;
   transition: 0.5s;
@@ -324,7 +281,7 @@ body {
 .container .card .contentBx .size span:hover
 {
   color: #111;
-  background: #9bdc28;
+  background: lightblue;
 }
 .container .card .contentBx .color span
 {
@@ -351,12 +308,12 @@ body {
 {
   display: inline-block;
   padding: 10px 30px;
-  background: #fff;
+  background: whitesmoke;
   border-radius: 4px;
   margin-top: 10px;
   text-decoration: none;
   font-weight: 600;
-  color: #111;
+  color: lightgray;
   opacity: 0;
   transform: translateY(50px);
   transition: 0.5s;
@@ -367,10 +324,129 @@ body {
   transform: translateY(0px);
   transition-delay: 0.75s;
 }
-
-
-
-
+.shop {
+  display: flex;
+  padding: 20px 40px;
+  background: whitesmoke;
+  border-radius: 4px;
+  margin-top: 70px;
+  text-decoration: none;
+  font-weight: 800;
+  color: lightgray;
+}
+.shop:hover {
+  background: lightblue;
+  color: white;
+}
+.bttnhold {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containerinput
+{
+    position: relative;
+    width: 500px;
+    
+    padding: 40px;
+    background: white;
+    font-family: 'Shippori Mincho', serif;
+}
+.containerinput h2
+{
+    color: #999;
+    margin-bottom: 25px;
+}
+.containerinput p
+{
+    color: #999;
+    margin-bottom: 25px;
+}
+.input-field
+{
+    position: relative;
+    height: 40px;
+    width: 100%;
+}
+.input-field input[type="text"]
+{
+    position: absolute;
+    background: transparent;
+    border: white;
+    box-shadow: none;
+    font-size: 16px;
+    color: lightgray;
+    width: 100%;
+}
+.input-field label
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #555;
+    pointer-events: none;
+    display: block;
+    transition: 0.5s;
+}
+.input-field input[type="text"]:focus + label,
+.input-field input[type="text"]:valid + label
+{
+    transform: translateY(-35px);
+    font-size: 14px;
+    color: #fff;
+    background: #ff006a;
+    padding: 2px 6px;
+    opacity: 0;
+}
+.input-field span
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    background: lightgray;
+    width: 100%;
+    height: 2px;
+}
+.input-field span:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00b0ff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+.input-field input[type="text"]:focus ~ span:before,
+.input-field input[type="text"]:valid ~ span:before
+{
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+.btn
+{
+    margin-top: 20px;
+    border: none;
+    box-shadow: none;
+    padding: 10px 25px;
+    background: lightgray;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn:hover
+{
+    background: #00bcd4;
+}
+.fa {
+  margin-left: 10px;
+  margin-top: 2px;
+}
 
 
 
@@ -524,7 +600,7 @@ footer .footer
 }
 .sec.quicklinks ul li a:hover
 {
-	color: #fff;
+	color: lightblue;
 }
 .sec.contact
 {
@@ -553,7 +629,7 @@ footer .footer
 }
 .sec.contact .info li a:hover
 {
-	color: #fff;
+	color: lightblue;
 }
 
 
@@ -587,4 +663,64 @@ footer .footer
 	{
 		padding: 5px 40px;
 	}
+}
+
+
+
+.bundle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 10rem;
+  height: 10rem;
+  transform:
+    perspective(75em)
+    rotateX(18deg);
+  box-shadow:
+    rgba(22, 31, 39, 0.42) 0px 60px 123px -25px,
+    rgba(19, 26, 32, 0.08) 0px 35px 75px -35px;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color:
+    rgb(213, 220, 226)
+    rgb(213, 220, 226)
+    rgb(184, 194, 204);
+}
+
+
+.wrapper {
+  height: 500px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.button-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+}
+
+.carousel {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  left: 0;
+  transition: all 1s ease;
+}
+
+.carousel .card {
+  background: white;
+  
+  margin-right: 8.4rem;
+  margin-left: 1rem;
+  display: inline-block;
 }

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/sal.css">
   </head>
   <body>
     <nav>
@@ -16,8 +17,20 @@
         <li><a href='store.html'>Store</a></li>
       </ul>
     </nav>
-    <header>
-      <div class='maincon'> 
+    <header >
+      <div data-sal="slide-right"
+      style="--sal-duration: 2s; --sal-delay: .5s;"
+      data-sal-easing="easeInQuint" class='mainconover'> 
+        
+        <h1>LL - a personal clothing brand</h1>
+        
+        <hr>
+        <p>An outlet for modern style and new clothing trends</p>
+
+      </div>
+      <div data-sal="slide-left"
+      style="--sal-duration: 2s; --sal-delay: .5s;"
+      data-sal-easing="easeInQuint" class='maincon'> 
         
         <h1>Collections of clothing and accessories</h1>
 
@@ -33,99 +46,200 @@
         
       </div>
         
-              <div class="container">
-                <div class="card">
-                  <div class="imgBx">
-                    <img src="Image\image-removebg-preview (25).png">
-                  </div>
-                  <div class="contentBx">
-                    <h2>North Face</h2>
-                    <div class="size">
-                      <h3>Size :</h3>
-                      <span>7</span>
-                      <span>8</span>
-                      <span>9</span>
-                      <span>10</span>
-                    </div>
-                    <div class="color">
-                      <h3>Color :</h3>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                    <a href="#">Buy Now</a>
-                  </div>
+
+      <div class="wrapper">
+        <ul class="carousel" data-target="carousel">
+          <li class="card" data-target="card">
+            <div class='container'>
+            <div class="card">
+            <div class="imgBx">
+              <img src="Image\image-removebg-preview (25).png">
+            </div>
+            <div class="contentBx">
+              <h2>North Face</h2>
+              <div class="size">
+                <h3>Size :</h3>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>10</span>
+              </div>
+              
+              <a href="#">Shop now </a>
+            </div>
+          </div>
+        </div>
+        </li>
+          <li class="card" data-target="card"> 
+            <div class='container'>
+              <div class="card">
+              <div class="imgBx">
+                <img src="Image\image-removebg-preview (25).png">
+              </div>
+              <div class="contentBx">
+                <h2>North Face</h2>
+                <div class="size">
+                  <h3>Size :</h3>
+                  <span>7</span>
+                  <span>8</span>
+                  <span>9</span>
+                  <span>10</span>
                 </div>
+                
+                <a href="#">Shop now </a>
+              </div>
+            </div>
+          </div>
+          </li>
+          <li class="card" data-target="card">
+            <div class="container">
+                
   
-                <div class="card">
-                  <div class="imgBx">
-                    <img src="Image\1614657677983blob-removebg-preview.png">
-                  </div>
-                  <div class="contentBx">
-                    <h2>Jeans</h2>
-                    <div class="size">
-                      <h3>Size :</h3>
-                      <span>7</span>
-                      <span>8</span>
-                      <span>9</span>
-                      <span>10</span>
-                    </div>
-                    <div class="color">
-                      <h3>Color :</h3>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                    <a href="#">Buy Now</a>
-                  </div>
+              <div class="card">
+                <div class="imgBx">
+                  <img src="Image\1614657677983blob-removebg-preview.png">
                 </div>
-                <div class="card">
-                  <div class="imgBx">
-                    <img src="Image\1614657598562blob-removebg-preview.png">
+                <div class="contentBx">
+                  <h2>Jeans</h2>
+                  <div class="size">
+                    <h3>Size :</h3>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
                   </div>
-                  <div class="contentBx">
-                    <h2>Sweater Weather</h2>
-                    <div class="size">
-                      <h3>Size :</h3>
-                      <span>7</span>
-                      <span>8</span>
-                      <span>9</span>
-                      <span>10</span>
-                    </div>
-                    <div class="color">
-                      <h3>Color :</h3>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                    <a href="#">Buy Now</a>
-                  </div>
+                  
+                  <a href="#">Shop now</a>
                 </div>
+              </div>
+          </li>
+          <li class="card" data-target="card">
+            <div class="container">
+            <div class="card">
+              <div class="imgBx">
+                <img src="Image\1614657598562blob-removebg-preview.png">
+              </div>
+              <div class="contentBx">
+                <h2>Sweater Weather</h2>
+                <div class="size">
+                  <h3>Size :</h3>
+                  <span>7</span>
+                  <span>8</span>
+                  <span>9</span>
+                  <span>10</span>
+                </div>
+                
+                <a href="#">Shop now</a>
+              </div>
+            </div>
+            </div>
+          </li>
+          <li class="card" data-target="card">
+
+            <div class="container">
+              <div class="card">
+                <div class="imgBx">
+                  <img src="Image\1614657598562blob-removebg-preview.png">
+                </div>
+                <div class="contentBx">
+                  <h2>Sweater Weather</h2>
+                  <div class="size">
+                    <h3>Size :</h3>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                  </div>
+                  
+                  <a href="#">Shop now</a>
+                </div>
+              </div>
+              </div>
+          </li>
+          <li class="card" data-target="card">
+            <div class="container">
+              <div class="card">
+                <div class="imgBx">
+                  <img src="Image\1614657598562blob-removebg-preview.png">
+                </div>
+                <div class="contentBx">
+                  <h2>Sweater Weather</h2>
+                  <div class="size">
+                    <h3>Size :</h3>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                  </div>
+                  
+                  <a href="#">Shop now</a>
+                </div>
+              </div>
+              </div>
+          </li>
+          <li class="card" data-target="card"></li>
+          <li class="card" data-target="card"></li>
+          <li class="card" data-target="card"></li>
+        </ul>
+        <div class="button-wrapper">
+          <button data-action="slideLeft">L</button>
+          <button data-action="slideRight">R</button>
+        </div>
+      </div>
+
+
+
+
+
+
+
+             
+               
   
   
   
-  
+                
             
   
            
       </div>
-       
+      <div class='bttnhold'>
+      <a  class='shop' href="#">View all our products <i class="fa fa-arrow-right"></i></a>
+    </div>
       <div class='about'>
-        <div class='wrapper'>
-        <h3>The shop</h3>
-        <p>we offer premium clothing sales and bundles. Join our newsletter for more info on our raffles and drops. </p>
+        <div class='wrappershop'>
+        <h3 id='shop'>The shop</h3>
+        <p>we offer premium clothing sales and bundles. Order a random box or a select item drop. We sell custom and name-brand clothing items at premium prices. Join our newsletter for more info on our raffles and drops. </p>
+        
       </div>
+      
       </div>
 
       <div class='special'>
-        <div class='wrapper'>
-        <h3>The shop</h3>
-        <p>we offer premium clothing sales and bundles. Join our newsletter for more info on our raffles and drops. </p>
+        <div class='bundle'>
+          <h3 id='bname'>first drop bundle</h3>
+          <i class="fab fa-accusoft"></i>
+        </div>
+        <div class='wrapper2'>
+        <h3>Get a custom bundle</h3>
+        <p>Our bundles are randomized sets of clothing put together by us, providing you with increased value. You could receive any one of our listed and even some non-listed items! </p>
       </div>
+      
       </div>
-
-
-
+      <div class='special'>
+      <div class="containerinput">
+        <h2>Join our newsletter</h2>
+        <p> Get the latest on drops, and new sales</p>
+        <form>
+          <div class="input-field">
+            <input type="text" name="" required="">
+            <label>Email</label>
+            <span></span>
+          </div>
+          <input type="submit" value="Join" class="btn">
+        </form>
+      </div>
+</div>
      
       <footer>
         <div class="footer">
@@ -225,12 +339,18 @@
              </form>
            </div>
     </template>
-    <script src="js/caousel.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/sal.js"></script>
     <script src="https://js.stripe.com/v3/"></script>
     <script type="module">
            import { loadProducts } from './js/load-products.js';
         
             loadProducts();
     </script>
+    	<script>
+        sal({
+          once: false
+        });
+      </script>
   </body>
 </html>
