@@ -1,3 +1,4 @@
+
 // Select the carousel you'll need to manipulate and the buttons you'll add events to
 const carousel = document.querySelector("[data-target='carousel']");
 const card = carousel.querySelector("[data-target='card']");
@@ -37,3 +38,4 @@ rightButton.addEventListener("click", function() {
     carousel.style.transform = `translateX(${offset}px)`;
   }
 })
+
