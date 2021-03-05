@@ -11,12 +11,12 @@
       "sku": "DEMO002",
       "name": "T-shirt color",
       "description": "We’re going on an adventure! Photo by Annie Spratt on Unsplash.",
-      "image": "sincerely-media-qeDcKFADdp8-unsplash.jpg?auto=format&fit=crop&w=600&h=600&q=80",
+      "image": "Image/1614657677983blob-removebg-preview.png?auto=format&fit=crop&w=600&h=600&q=80",
       "amount": 1500,
       "currency": "USD"
     },
     {
-      "sku": "DEMO002",
+      "sku": "DEMO003",
       "name": "new shit",
       "description": "We’re going on an adventure! Photo by Annie Spratt on Unsplash.",
       "image": "sincerely-media-qeDcKFADdp8-unsplash.jpg?auto=format&fit=crop&w=600&h=600&q=80",

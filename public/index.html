@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="css/sal.css">
   </head>
   <body>
+    <div data-sal="slide-down"
+    style="--sal-duration: 2s; --sal-delay: .5s;"
+    data-sal-easing="easeInQuint" class="opentext">
+      <p>Opening Sale ! Join our newsletter to get 10% off</p>
+    </div>
     <nav>
       <h1>Langer's Luxury</h1>
       <ul class='mainnav'>
@@ -51,7 +56,7 @@
         <ul class="carousel" data-target="carousel">
           <li class="card" data-target="card">
             <div class='container'>
-            <div class="card">
+            <div class="cardfeat">
             <div class="imgBx">
               <img src="Image\image-removebg-preview (25).png">
             </div>
@@ -72,12 +77,12 @@
         </li>
           <li class="card" data-target="card"> 
             <div class='container'>
-              <div class="card">
+              <div class="cardfeat">
               <div class="imgBx">
-                <img src="Image\image-removebg-preview (25).png">
+                <img src="Image\image-removebg-preview (27).png">
               </div>
               <div class="contentBx">
-                <h2>North Face</h2>
+                <h2>Nuggs hat</h2>
                 <div class="size">
                   <h3>Size :</h3>
                   <span>7</span>
@@ -95,7 +100,7 @@
             <div class="container">
                 
   
-              <div class="card">
+              <div class="cardfeat">
                 <div class="imgBx">
                   <img src="Image\1614657677983blob-removebg-preview.png">
                 </div>
@@ -115,7 +120,7 @@
           </li>
           <li class="card" data-target="card">
             <div class="container">
-            <div class="card">
+            <div class="cardfeat">
               <div class="imgBx">
                 <img src="Image\1614657598562blob-removebg-preview.png">
               </div>
@@ -137,12 +142,12 @@
           <li class="card" data-target="card">
 
             <div class="container">
-              <div class="card">
+              <div class="cardfeat">
                 <div class="imgBx">
-                  <img src="Image\1614657598562blob-removebg-preview.png">
+                  <img src="Image\image-removebg-preview (26).png">
                 </div>
                 <div class="contentBx">
-                  <h2>Sweater Weather</h2>
+                  <h2>I had a dream shirt</h2>
                   <div class="size">
                     <h3>Size :</h3>
                     <span>7</span>
@@ -158,12 +163,12 @@
           </li>
           <li class="card" data-target="card">
             <div class="container">
-              <div class="card">
+              <div class="cardfeat">
                 <div class="imgBx">
-                  <img src="Image\1614657598562blob-removebg-preview.png">
+                  <img src="Image\image-removebg-preview (28).png">
                 </div>
                 <div class="contentBx">
-                  <h2>Sweater Weather</h2>
+                  <h2>Vancouver jersey</h2>
                   <div class="size">
                     <h3>Size :</h3>
                     <span>7</span>
@@ -182,8 +187,8 @@
           <li class="card" data-target="card"></li>
         </ul>
         <div class="button-wrapper">
-          <button data-action="slideLeft">L</button>
-          <button data-action="slideRight">R</button>
+          <button data-action="slideLeft"><i class="fa fa-arrow-left"></i></button>
+          <button data-action="slideRight"><i class="fa fa-arrow-right"></i></button>
         </div>
       </div>
 
@@ -204,7 +209,7 @@
            
       </div>
       <div class='bttnhold'>
-      <a  class='shop' href="#">View all our products <i class="fa fa-arrow-right"></i></a>
+      <a  class='shop' href="#">View all our products <i class="fa fa-arrow-right arrow"></i></a>
     </div>
       <div class='about'>
         <div class='wrappershop'>
@@ -212,21 +217,6 @@
         <p>we offer premium clothing sales and bundles. Order a random box or a select item drop. We sell custom and name-brand clothing items at premium prices. Join our newsletter for more info on our raffles and drops. </p>
         
       </div>
-      
-      </div>
-
-      <div class='special'>
-        <div class='bundle'>
-          <h3 id='bname'>first drop bundle</h3>
-          <i class="fab fa-accusoft"></i>
-        </div>
-        <div class='wrapper2'>
-        <h3>Get a custom bundle</h3>
-        <p>Our bundles are randomized sets of clothing put together by us, providing you with increased value. You could receive any one of our listed and even some non-listed items! </p>
-      </div>
-      
-      </div>
-      <div class='special'>
       <div class="containerinput">
         <h2>Join our newsletter</h2>
         <p> Get the latest on drops, and new sales</p>
@@ -239,7 +229,23 @@
           <input type="submit" value="Join" class="btn">
         </form>
       </div>
-</div>
+      </div>
+
+      <div class='special'>
+        <div class='bundle'>
+          <h3 id='bname'>First drop</h3>
+          <i class="fa fa-cubes"></i>
+        </div>
+        <div class='bundle'>
+          <h3 id='bname'>Hype drop</h3>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <div class='wrapper2'>
+        <h3>Get a custom bundle</h3>
+        <p>Our bundles are randomized sets of clothing put together by us, providing you with increased value. You could receive any one of our listed and even some non-listed items! </p>
+      </div>
+      
+      </div>
      
       <footer>
         <div class="footer">
@@ -321,6 +327,7 @@
     <template id="product">
            <div class="product">
              <img src="" alt="" />
+             
              <h2>name</h2>
              <p class="description">description</p>
              <p class="price">price</p>

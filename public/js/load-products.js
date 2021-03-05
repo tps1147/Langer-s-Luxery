@@ -15,6 +15,7 @@ function createProductFromTemplate(item) {
   const img = product.querySelector('img');
   img.src = item.image;
   img.alt = item.name;
+ 
 
   const form = product.querySelector('form');
    form.addEventListener('submit', handleFormSubmission);
