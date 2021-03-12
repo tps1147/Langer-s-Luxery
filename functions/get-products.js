@@ -1,4 +1,4 @@
-const products = require('./data/products.json');
+const collection = require('.././db');
 
 exports.handler = async () => {
   return {

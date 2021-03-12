@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "main": "app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "sequelize": "^5.10.1",
+    "sqlite": "^4.0.9",
+    "sqlite3": "^5.0.2",
     "stripe": "^8.137.0"
   }
 }
